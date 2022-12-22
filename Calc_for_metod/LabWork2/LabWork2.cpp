@@ -348,16 +348,16 @@ int main(int argc, char* argv[])
     
     if(isTest){
         int si = v.size();
-        cout << "n\tx\tu\tv\tu - v\n";
+        cout << "n\tx\tu\tv\t|u - v|\n";
         for (int i = 0; i < si; ++i) {
-            cout << v[i].n << "\t" << v[i].x << "\t" << v[i].u << "\t" << v[i].v << "\t" << v[i].error << "\n";
+            cout << v[i].n << "\t" << v[i].x << "\t" << v[i].u << "\t" << v[i].v << "\t" << abs(v[i].error) << "\n";
         }
     }
     else {
         int si = v.size();
-        cout<<"n\tx\tv\tv'\tv - v'\n";
+        cout<<"n\tx\tv\tv'\t|v - v'|\n";
         for (int i = 0; i < si; ++i) {
-            cout << v[i].n << "\t" << v[i].x << "\t" << v[i].v << "\t" << v[i].db_v << "\t" << v[i].accuracy << "\n";
+            cout << v[i].n << "\t" << v[i].x << "\t" << v[i].v << "\t" << v[i].db_v << "\t" << abs(v[i].accuracy) << "\n";
         }
     }
 }
